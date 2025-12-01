@@ -71,23 +71,22 @@ const shoutEveryLetterForLoop = (str) => {
 // ============================================
 
 const letterCaseCounts = (str) => {
-  let lowercase = 0;
-  let uppercase = 0;
-  let neither = 0;
+  const count = {
+  lowercase: 0,
+  uppercase: 0,
+  neither: 0
+  };
 
-  for (let i = 0; i < str.length; i++) {
-    const char = str[i];
-
-    if (char > "a" && char <= "z")
-      lowercase++;
-    else if (char >= "A" && char <= "Z") {
-      uppercase++
+  for (const char of str) {
+    if (char >= 'a' && char <= 'z') {
+      counts.lowercase++;
+    }  else if (char >= "A" && char <= "Z") {
+      counts.uppercase++
     } else {
-      neither++;
+    counts.neither++;
     }
-
-  }
-  return { lowercase, uppercase, neither };
+ }
+  return counts;
 
 };
 
@@ -96,7 +95,16 @@ const letterCaseCounts = (str) => {
 // ============================================
 
 const getNamesOfGreedyGnomes = (gnomes) => {
-  // Your code here
+  const greedyNames = [];
+
+  for (const gnome of gnomes) {
+    if (gnomes.stolenDecoration.length > 1) {
+      greedyNames.push(gnome.name);
+    }
+  }
+
+  return greedyNames;
+  
 };
 
 // ============================================

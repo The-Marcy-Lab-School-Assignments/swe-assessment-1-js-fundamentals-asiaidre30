@@ -7,31 +7,40 @@ Write your responses directly in this file. Follow markdown formatting guideline
 ## Section 1: Short Response
 
 ### Question 1
- After reviewing this code i saw that it is an conditional statement, an conditional statement allows your program to make decisions wheter or not your statement is true or false. and you can use "if", "else" "else if" to hand multiple situations. these statements can control the flow of your code. so as we see in the code the problem i think it can be is the "let" statements i think it should be console.log statements because we can change let statements and not change console.log statements. so to fix this code i think instead of let we can use console.log to print our words.
+After reviewing this code, I saw that it is a conditional statement. A conditional statement allows your program to make decisions based on whether something is true or false. You can use if, else, and else if to handle multiple situations. These statements control the flow of your code.
+
+In the code we reviewed, I think the issue might be with the use of the let statements. I believe they should be console.log statements instead, because let is used to store or change values, while console.log is used to print messages. So to fix this code, I think we should replace the let statements with console.log to properly print the output.
 
 
 ### Question 2
-This following code logs "michael jordan" because objects are stored by refrence and not the value. when theGoat is set equal to the bestPlayer both variables basically reach out to the same object. changing best player.name can also changwe the goat.name since they share the same refrence therefore it console.logs michael jordan.
+The following code logs "Michael Jordan" because objects are stored by reference and not by value. When the Goat is set equal to the best player, both variables essentially refer to the same object. changing the best player. name can also change the goat.name since they share the same reference, therefore it console. logs Michael Jordan.
+
+
 
 
 ### Question 3
-This following code logs 'paul' first and than 'laisha' because the variable hustler was redefined inside the function the variable inside basically shadows the one outside. this means the function uses its own value 'paul'. while the outer .log uses the global value laisha.
+
 
 ### Question 4
- the purpose of rest parameters in javaScript is to allow a function to accept any number of arguments . usually functions have a fixed number of parameters. but sometimes you dont know how many values are passed in. Rest parameters make it possible to handle and unlimited number of arguwmnts easily by collecting them into and single array. 
+ The purpose of rest parameters in JavaScript is to allow a function to accept any number of arguments. Usually, functions have a fixed number of parameters, but sometimes you don’t know how many values will be passed in. Rest parameters make it possible to handle an unlimited number of arguments easily by collecting them into a single array.
 
- to turn a parameter in a rest parameter, you simply add 3 dots (...) before its name in the function definition. for example if you write 
- function example(...values), than inside the function the value will act like an array holding all the arguments that were passed in. you can than use specific methods such as array methods like .reduce  to work with those values.
-
- const sum(...numbers) {
-    let total= 0
-for (let num of mumbers){
+To turn a parameter into a rest parameter, you simply add three dots (...) before its name in the function definition. For example, if you write:
+```
+function example(...values) { }
+```
+then inside the function, values will act like an array holding all the arguments that were passed in. You can then use methods such as array methods like .reduce() to work with those values.
+```
+const sum = (...numbers) => {
+  let total = 0;
+  for (const num of numbers) {
     total += num;
- } 
- return total
- }
- console.log(4,8,12,16) // 40
-this fucntion tell us how the "... numbers" gathers all of these arguments into an array. the loop then adds them all together to get our output. this also shows how flexible this function is.
+  }
+  return total;
+};
+
+console.log(sum(4, 8, 12, 16)); // 40
+```
+This function shows how ...numbers gathers all of the arguments into an array. The loop then adds them together to produce the output. This also demonstrates how flexible rest parameters make functions.
 ### Question 5
 A scope  defines where variables can be accessed in your code. Variables declared inside a function are only visible inside that function. Those declared outside are in the global scope and can be accessed anywhere. This helps prevent name conflicts and accidental overwrites.
 
